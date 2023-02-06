@@ -16,12 +16,41 @@
             </p>
         </div>
     </div>
+    <div class="container">
+        <div class="mgb20">
+            <span class="label">角色：</span>
+            <el-select v-model="role" @change="handleChange">
+                <el-option label="超级管理员" value="admin"></el-option>
+                <el-option label="食材管理员" value="user"></el-option>
+                <el-option label="供货人员" value="user"></el-option>
+            </el-select>
+        </div>
+        <div class="mgb20 tree-wrapper">
+            <el-tree
+                    ref="tree"
+                    :data="data"
+                    node-key="id"
+                    default-expand-all
+                    show-checkbox
+                    :default-checked-keys="checkedKeys"
+            />
+        </div>
+        <el-button type="primary" @click="onSubmit">保存权限</el-button>
+    </div>
 </template>
 
 <script>
+
+    import {ref} from "@vue/reactivity";
+    import { ElTree } from "element-plus";
+    const role = ref ('admin');
+
+
 export default {
     name: "permission"
+
 };
+
 </script>
 
 <style scoped>
