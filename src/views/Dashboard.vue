@@ -61,8 +61,8 @@
                             <div class="grid-content grid-con-2">
                                 <i class="el-icon-message-solid grid-con-icon"></i>
                                 <div class="grid-cont-right">
-                                    <div class="grid-num">0</div>
-                                    <div>系统消息</div>
+                                    <div class="grid-num">{{supplyCount}}</div>
+                                    <div>商家数量</div>
                                 </div>
                             </div>
                         </el-card>
@@ -119,8 +119,8 @@
 import Schart from "vue-schart";
 import { reactive } from "vue";
 import {ref} from "@vue/reactivity";
-import {getFoodNum} from "../api";
-import {getUserNum} from "../api";
+import {getFoodNum,getUserNum,getSupplyCount} from "../api";
+
 
 
 export default {
@@ -130,7 +130,7 @@ export default {
         const name = localStorage.getItem("ms_username");
         const role = name === "admin" ? "超级管理员" : "普通用户";
 
-
+        //食材数量
         const foodCount=ref('0');
         getFoodNum().then(res=>{
             console.log('结果')
@@ -138,12 +138,22 @@ export default {
             foodCount.value=res.data.data
         })
 
+        //用户数量
         const userCount=ref('0');
         getUserNum().then(res=>{
             console.log('结果')
             console.log(res.data.data)
             userCount.value=res.data.data
         })
+
+        //供应商数量
+        const supplyCount=ref('0');
+        getSupplyCount().then(res=>{
+          console.log('结果')
+          console.log(res.data.data)
+          supplyCount.value=res.data.data
+        })
+
 
         // const data = reactive([
         //     {
@@ -251,6 +261,7 @@ export default {
             role,
             userCount,
             foodCount,
+            supplyCount,
             //data,
             // options,
             // options2,
