@@ -13,22 +13,23 @@
                 访问地址：
                 <a href="https://github.com/lin-xin/vue-schart" target="_blank">vue-schart</a>
             </div>
-            <div class="schart-box">
-                <div class="content-title">柱状图</div>
-                <schart class="schart" canvasId="bar" :options="options1"></schart>
-            </div>
+
+<!--            <div class="schart-box">-->
+<!--                <div class="content-title">柱状图</div>-->
+<!--                <schart class="schart" canvasId="bar" :options="options1"></schart>-->
+<!--            </div>-->
             <div class="schart-box">
                 <div class="content-title">折线图</div>
                 <schart class="schart" canvasId="line" :options="options2"></schart>
             </div>
-            <div class="schart-box">
-                <div class="content-title">饼状图</div>
-                <schart class="schart" canvasId="pie" :options="options3"></schart>
-            </div>
-            <div class="schart-box">
-                <div class="content-title">环形图</div>
-                <schart class="schart" canvasId="ring" :options="options4"></schart>
-            </div>
+<!--            <div class="schart-box">-->
+<!--                <div class="content-title">饼状图</div>-->
+<!--                <schart class="schart" canvasId="pie" :options="options3"></schart>-->
+<!--            </div>-->
+<!--            <div class="schart-box">-->
+<!--                <div class="content-title">环形图</div>-->
+<!--                <schart class="schart" canvasId="ring" :options="options4"></schart>-->
+<!--            </div>-->
         </div>
     </div>
 </template>
