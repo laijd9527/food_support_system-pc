@@ -20,7 +20,7 @@
                 <div class="login-btn">
                     <el-button type="primary" @click="submitForm()">登录</el-button>
                 </div>
-                <p class="login-tips">Tips : 登录账号将自动识别用户类型呈现对应页面</p>
+                <p class="login-tips">Tips : </p>
             </el-form>
         </div>
     </div>
