@@ -13,6 +13,15 @@ export const getSupplyCount=(params)=>request.post('/supply/getSupplyCount',para
 
 //获得所有用户接口
 export const getAllUser = (params) => request.post('/user/getAllUser', params)
-
 //查询所有食材管理员信息接口
 export const getAllManager=(params)=>request.post('/foodManager/getAllManager',params)
+//查询所有供货人信息接口
+export const getAllSupplier=(params)=>request.post('/supplier/getAllSupplier',params)
+//查询所有供应商接口
+export const getAllSupply=(params)=>request.post('/supply/getAllSupply',params)
+//查询所有食材接口
+export const getAllFood=(params)=>request.post('/food/getAllFood',params)
+//查询所有下次供应的食材接口
+export const nextSupply=(params)=>request.post('/nextSupply/getAllNextSupply',params)
+
+
