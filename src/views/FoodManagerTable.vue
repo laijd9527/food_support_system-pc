@@ -65,6 +65,7 @@
                 v-model="form.createTime"
                 type="datetime"
                 placeholder="请选择日期和时间"
+
             />
           </el-form-item>
           <el-form-item label="备注">
@@ -133,14 +134,15 @@
 
 <script>
 import {ref, reactive, getCurrentInstance} from "vue";
-import { ElMessage, ElMessageBox } from "element-plus";
+import { ElMessage, ElMessageBox} from "element-plus";
 import {getAllManager} from "../api/index";
 import request from "../request";
-
-
+import { useDateFormat } from "@vueuse/core";
+// import timeFormat from "../mixins/timeFormat";
 
 export default {
   name: "foodManagerTable",
+  // mixins:[timeFormat],
   setup() {
     //获取表格数据
     const tableData = ref([]);
@@ -152,6 +154,15 @@ export default {
       });
     };
     getData();
+
+    //时间格式化
+    // const timeFormat=useDateFormat($toTime,'YYYY-MM-DD HH:mm:ss')
+    // const timeFormat = {
+    //     data() {
+    //       return $toTime;
+    //     }
+    // };
+
 
     //查询操作(未做)
     const query =reactive({
@@ -290,6 +301,7 @@ export default {
       proxy,
       state,
       form,
+      // timeFormat,
       getData,
       handleSearch,
       handleAdd,
