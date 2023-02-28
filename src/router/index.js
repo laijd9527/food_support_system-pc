@@ -38,6 +38,38 @@ const routes = [
             },
 
             {
+                path: "/supplierTable",
+                name: "supplierTable",
+                meta: {
+                    title: '供货人表'
+                },
+                component: () => import ( /* webpackChunkName: "table" */ "../views/SupplierTable.vue")
+            },
+            {
+                path: "/supplyTable",
+                name: "supplyTable",
+                meta: {
+                    title: '供应商表'
+                },
+                component: () => import ( /* webpackChunkName: "table" */ "../views/SupplyTable.vue")
+            },
+            {
+                path: "/foodTable",
+                name: "foodTable",
+                meta: {
+                    title: '食材表'
+                },
+                component: () => import ( /* webpackChunkName: "table" */ "../views/FoodTable.vue")
+            },
+            {
+                path: "/nextSupplyTable",
+                name: "nextSupplyTable",
+                meta: {
+                    title: '下次食材供应信息表'
+                },
+                component: () => import ( /* webpackChunkName: "table" */ "../views/NextSupplyTable.vue")
+            },
+            {
                 path: "/charts",
                 name: "basecharts",
                 meta: {
