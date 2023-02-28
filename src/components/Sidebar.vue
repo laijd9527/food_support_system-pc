@@ -57,20 +57,20 @@ export default {
                     title: "食材管理员表"
                   },
                   {
-                    index: "/",
-                    title: "食材表"
-                  },
-                  {
-                    index: "/",
+                    index: "/SupplierTable",
                     title: "供货人表"
                   },
                   {
-                    index: "/",
+                    index: "/SupplyTable",
                     title: "供应商表"
                   },
                   {
-                    index: "/",
-                    title: "下次供应信息表"
+                    index: "/FoodTable",
+                    title: "食材表"
+                  },
+                  {
+                    index: "/NextSupplyTable",
+                    title: "下次食材供应信息表"
                   },
                 ]
             },
